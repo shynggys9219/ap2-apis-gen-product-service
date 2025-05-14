@@ -83,6 +83,6 @@ jobs:
             git commit -m "Regenerate proto Go files"
             NEW_TAG="v0.0.$(date +%s)"
             git tag "$NEW_TAG"
-            git remote set-url origin https://x-access-token:${{ secrets.GeneralToken }}@github.com/shynggys9219/ap2-apis-gen-product-service.git
+            git remote set-url origin https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/shynggys9219/ap2-apis-gen-product-service.git
             git push origin master --follow-tags
           fi
